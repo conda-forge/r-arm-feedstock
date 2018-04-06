@@ -16,45 +16,49 @@ source:
 
 build:
   number: 0
-  skip: true  # [win or osx]
-
+  skip: true  # [win32]
   rpaths:
     - lib/R/lib/
     - lib/
+
 requirements:
   build:
-    - gettext 0.19.7
     - r-base
     - r-mass
-    - r-matrix
+    - r-matrix >=1.0
     - r-abind
     - r-coda
-    - r-lme4
+    - r-lme4 >=1.0
     - r-nlme
 
   run:
-    - gettext 0.19.7
     - r-base
     - r-mass
-    - r-matrix
+    - r-matrix >=1.0
     - r-abind
     - r-coda
-    - r-lme4
+    - r-lme4 >=1.0
     - r-nlme
 
 test:
   commands:
     - $R -e "library('arm')"  # [not win]
+    - "\"%R%\" -e \"library('arm')\""  # [win]
 
 about:
   home: https://CRAN.R-project.org/package=arm
-  license: GPL-3
+  license: GPL (>= 3)
   summary: Functions to accompany A. Gelman and J. Hill, Data Analysis Using Regression and Multilevel/Hierarchical
     Models, Cambridge University Press, 2007.
   license_family: GPL3
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
+  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
 
 extra:
   recipe-maintainers:
     - ThimotheeV
     - johanneskoester
     - bgruening
+    - daler
+    - jdblischak
+    - cbrueffer
