@@ -1,5 +1,4 @@
-{% set version = '1.9-3' %}
-
+{% set version = '1.10-1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +9,12 @@ package:
 source:
   fn: arm_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/arm_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/arm/arm_{{ version }}.tar.gz
-  sha256: 1cefcc1d82431f1b3ed014ff04dd087fd0da3396df5a25144ffa80a8d01fe700
+    - {{ cran_mirror }}/src/contrib/arm_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/arm/arm_{{ version }}.tar.gz
+  sha256: 6f1158c9295e65bd649139224497d3356189b931ff143f9b374daae72548776f
 
 build:
+  merge_build_host: True  # [win]
   number: 0
   skip: true  # [win32]
   rpaths:
@@ -23,6 +23,8 @@ build:
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
     - r-mass
     - r-matrix >=1.0
@@ -30,7 +32,6 @@ requirements:
     - r-coda
     - r-lme4 >=1.0
     - r-nlme
-
   run:
     - r-base
     - r-mass
@@ -42,7 +43,7 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('arm')"  # [not win]
+    - $R -e "library('arm')"           # [not win]
     - "\"%R%\" -e \"library('arm')\""  # [win]
 
 about:
@@ -62,3 +63,4 @@ extra:
     - daler
     - jdblischak
     - cbrueffer
+    - dbast
