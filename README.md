@@ -14,9 +14,8 @@ Summary: Functions to accompany A. Gelman and J. Hill, Data Analysis Using Regre
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-arm-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-arm-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-arm-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-arm-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-arm-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-arm-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-arm-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-arm-feedstock)
 
 Current release info
 ====================
