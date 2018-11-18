@@ -14,9 +14,9 @@ source:
   sha256: 6f1158c9295e65bd649139224497d3356189b931ff143f9b374daae72548776f
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 0
-  skip: true  # [win32]
+  number: 1000
   rpaths:
     - lib/R/lib/
     - lib/
@@ -52,8 +52,7 @@ about:
   summary: Functions to accompany A. Gelman and J. Hill, Data Analysis Using Regression and Multilevel/Hierarchical
     Models, Cambridge University Press, 2007.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
