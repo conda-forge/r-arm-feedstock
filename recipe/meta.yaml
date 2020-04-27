@@ -1,4 +1,4 @@
-{% set version = '1.10-1' %}
+{% set version = "1.11-1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,19 +11,19 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/arm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/arm/arm_{{ version }}.tar.gz
-  sha256: 6f1158c9295e65bd649139224497d3356189b931ff143f9b374daae72548776f
+  sha256: 7b82dbe8c5141546d11b0af656a6addda4c07f06fc165d01c7c1e39540b55444
 
 build:
   noarch: generic
-  merge_build_host: True  # [win]
-  number: 1001
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{posix}}zip               # [win]
+    - {{ posix }}zip               # [win]
   host:
     - r-base
     - r-mass
@@ -49,10 +49,9 @@ test:
 about:
   home: https://CRAN.R-project.org/package=arm
   license: GPL (>= 3)
-  summary: Functions to accompany A. Gelman and J. Hill, Data Analysis Using Regression and Multilevel/Hierarchical
-    Models, Cambridge University Press, 2007.
+  summary: Functions to accompany A. Gelman and J. Hill, Data Analysis Using Regression and Multilevel/Hierarchical Models, Cambridge University Press, 2007.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
