@@ -26,6 +26,7 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
+    - r-hmisc
     - r-mass
     - r-matrix >=1.0
     - r-abind
@@ -34,6 +35,7 @@ requirements:
     - r-nlme
   run:
     - r-base
+    - r-hmisc
     - r-mass
     - r-matrix >=1.0
     - r-abind
@@ -48,18 +50,12 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=arm
-  license: GPL (>= 3)
+  license: GPL-2.0-or-later
   summary: Functions to accompany A. Gelman and J. Hill, Data Analysis Using Regression and Multilevel/Hierarchical Models, Cambridge University Press, 2007.
-  license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_family: GPL2
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
     - conda-forge/r
     - ThimotheeV
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
