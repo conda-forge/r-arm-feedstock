@@ -1,4 +1,4 @@
-{% set version = "1.11-2" %}
+{% set version = "1.12-2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/arm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/arm/arm_{{ version }}.tar.gz
-  sha256: 8385be32f6b6b6f1b32df15f42073b191d714d870bbb4f95875b64aff6112bbf
+  sha256: 816ba1c31eec00feef472c57e280488d3d233b592f6f0a1a30e4abb903cb4f5d
 
 build:
   noarch: generic
