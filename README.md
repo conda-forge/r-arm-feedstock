@@ -1,11 +1,11 @@
-About r-arm
-===========
+About r-arm-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-arm-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=arm
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-arm-feedstock/blob/main/LICENSE.txt)
 
 Summary: Functions to accompany A. Gelman and J. Hill, Data Analysis Using Regression and Multilevel/Hierarchical Models, Cambridge University Press, 2007.
 
