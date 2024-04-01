@@ -1,4 +1,4 @@
-{% set version = "1.13-1" %}
+{% set version = "1.14-4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,12 +11,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/arm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/arm/arm_{{ version }}.tar.gz
-  sha256: c02da290c1b9699b958431865fcedce94f00ccc80da5c0aa50ed1c3fb56de937
+  sha256: 425bcb0afea2efb668d15ed8daa430bb356c62587eba806fd91e37afac1807bd
 
 build:
   noarch: generic
   merge_build_host: true  # [win]
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
