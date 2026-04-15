@@ -1,15 +1,15 @@
-{% set version = "1.15-2" %}
+{% set version = "1.15-3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-arm
-  version: "{{ version|replace("-", "_") }}"
+  version: {{ version|replace("-", "_") }}
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/arm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/arm/arm_{{ version }}.tar.gz
-  sha256: 69ea9c19263084c303208b201e7bf086ec56e343e229b17b27b0e0ea73fb96f4
+  sha256: 94478b0593d751f6c0b2336ed66fee216c7573442a776e5a1eb398a91a50466c
 
 build:
   number: 0
